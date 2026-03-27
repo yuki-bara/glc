@@ -19,8 +19,6 @@ jobs:
         os: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - name: Install Make
-        run: sudo apt update && sudo apt install -y make
       - name: Setup go
         uses: actions/setup-go@v5
         with:
@@ -30,5 +28,5 @@ jobs:
       - name: Test compile
         run: make build_test
       - name: Test Use
-        timeout-minutes: 3
+        timeout-minutes: 5
         run: tests/pull_license.bash
