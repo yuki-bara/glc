@@ -50,8 +50,6 @@ func main() {
 				fmt.Printf("Error parsing JSON: %v\n", err)
 				return
 			}
-
-			// Create a file.
 			err = os.WriteFile(lic.Name, []byte(lic.Body), 0644)
 			if err != nil {
 				log.Fatalf("Error writing file: %v", err)
