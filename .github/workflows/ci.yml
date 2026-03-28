@@ -3,8 +3,8 @@
 
 name: CI
 on:
-    release: 
-        types: [published]
+  push:
+    paths: "src/**"
 
 permissions:
   contents: read
