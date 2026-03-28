@@ -32,4 +32,4 @@ jobs:
       - name: Test Use
         timeout-minutes: 5
         run: |
-          cd tests ./glc mit
+          cd tests && ./glc mit
