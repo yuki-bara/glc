@@ -25,6 +25,10 @@ func main() {
 	if len(os.Args) < 2 {
 		log.Fatal("Usage: lses <license-name>")
 	}
+	if os.Args[1] == "-V" {
+		fmt.Printf("version: %s\n", version)
+		return
+	}
 	var wg sync.WaitGroup
 	for i := 1; i < len(os.Args); i++ {
 		wg.Add(1)
