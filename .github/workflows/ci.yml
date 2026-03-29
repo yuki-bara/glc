@@ -4,7 +4,9 @@
 name: CI
 on:
   push:
-    paths: "src/**"
+    paths: 
+      - src/**
+      - .github/workflows/ci.yml
 
 permissions:
   contents: read
@@ -29,4 +31,5 @@ jobs:
         run: make build_test
       - name: Test Use
         timeout-minutes: 5
-        run: tests/pull_license.bash
+        run: |
+          cd tests && ./glc mit

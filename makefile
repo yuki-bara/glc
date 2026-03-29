@@ -4,7 +4,7 @@
 CMD = go
 ACT = build
 NAM = glc
-VERSION=1.0
+VERSION=1.1
 
 build :
 	mkdir -p bin
